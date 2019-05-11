@@ -13,3 +13,4 @@ import { createStore } from 'redux'
 const store = createStore(reducers);
 store.dispatch({ type: 'INCREMENT' });
 store.getState()
+store.subscribe(render)  //希望被更的新组件
