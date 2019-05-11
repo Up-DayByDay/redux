@@ -1,2 +1,0 @@
-# redux
-redux学习。
