@@ -3,6 +3,25 @@ import React, { Component } from 'react'
 class Counter extends Component{
     constructor(props){
         super(props);
+        this.state ={
+            proCount:0,
+            count:0
+        }
+    }
+
+    componentDidMount() {
+
+        this.setState({
+            count:1,
+            proCount:10
+        });
+        this.setState({
+            count:2,
+            proCount:101
+        })
+        this.setState({
+            count:3
+        })
     }
 
     render(){
@@ -16,7 +35,7 @@ class Counter extends Component{
                 Clicked: {value} times
                 <button onClick={onIncrement}>
                 +
-                </button> 
+                </button> {this.state.proCount} + {this.state.count}
             </p>
         )
     }
